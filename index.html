@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUB-THB Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Currency Converter</h2>
+
+        <!-- Currency Selection -->
+        <div class="currency-block">
+            <h3>Выберите валюту</h3>
+            <select id="currencySelect" onchange="calculateTHB()">
+                <option value="RUB">RUB</option>
+                <option value="USDT">USDT</option>
+            </select>
+        </div>
+
+        <!-- Amount Input -->
+        <div class="currency-block">
+            <h3>Сумма</h3>
+            <input type="number" id="inputAmount" placeholder="Введите сумму" oninput="calculateTHB()">
+        </div>
+
+        <!-- THB Amount -->
+        <div class="currency-block">
+            <h3>Получите в THB</h3>
+            <input type="text" id="outputAmount" readonly>
+        </div>
+
+        <!-- THB to Currency Rate Display -->
+        <div id="thbRate" class="currency-block"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

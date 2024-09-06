@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Поднимаем блок ближе к верху */
+    height: 100vh;
+    background: linear-gradient(135deg, #1c1f26, #3b3f51);
+    color: #f0f0f0;
+    padding-top: 20px; /* Отступ сверху */
+}
+
+.calculator-container {
+    background: #292d3e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 450px;
+}
+
+h2 {
+    text-align: center;
+    color: #ffcc00;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.currency-block {
+    margin-bottom: 15px;
+}
+
+.currency-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 2px solid #3b3f51;
+    border-radius: 8px;
+    background-color: #1c1f26;
+    color: #f0f0f0;
+    outline: none;
+    transition: 0.3s;
+}
+
+select:focus, input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #ffcc00;
+}
+
+select {
+    appearance: none; /* Убираем стандартный стиль селекта */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath fill='%23fff' d='M0 0h10L5 5z'/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+input[type="number"], input[type="text"] {
+    padding-left: 15px;
+}
+
+input[type="text"] {
+    background-color: #3b3f51;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+#exchangeRate, #thbRate {
+    text-align: center;
+    font-size: 1rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+/* Responsive behavior */
+@media (max-width: 480px) {
+    .calculator-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
